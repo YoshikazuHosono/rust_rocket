@@ -20,3 +20,8 @@ pub fn get_user() -> Json<Vec<User>> {
         },
     ])
 }
+
+#[post("/user", data = "<user>")]
+pub fn new_todo(user: Json<User>) -> String {
+    format!("{:?}", user.0)
+}
