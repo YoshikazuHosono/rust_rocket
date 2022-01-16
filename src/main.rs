@@ -14,5 +14,3 @@ fn main() {
         .mount("/", routes![index, get_user, new_todo])
         .launch();
 }
-
--d '{"user_id": 5, "user_name":"POPPPP"}'
