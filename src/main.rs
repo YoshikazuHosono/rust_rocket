@@ -4,12 +4,13 @@
 #[macro_use]
 extern crate rocket;
 
-mod routes;
-
 use routes::*;
+
+mod models;
+mod routes;
 
 fn main() {
     rocket::ignite()
-        .mount("/", routes![index])
+        .mount("/", routes![index, get_user])
         .launch();
 }
